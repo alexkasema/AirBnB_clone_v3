@@ -45,7 +45,7 @@ def states_by_id(state_id):
         if update is None or type(update) is not dict:
             return jsonify({'error': 'Not a JSON'}), 400
         for key, value in update.items():
-            if key not in ['id', 'created_at', 'upated_at']:
+            if key not in ['id', 'created_at', 'updated_at']:
                 setattr(state, key, value)
                 storage.save()
 

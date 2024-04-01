@@ -17,6 +17,7 @@ def close_session(error):
     """ closes a db session """
     storage.close()
 
+
 @app.errorhandler(404)
 def not_found(error):
     """ handler for 404 errors """
